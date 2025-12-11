@@ -1,0 +1,132 @@
+@use '../../styles/variables' as *;
+
+.footer {
+  background-color: #0c0c0c; 
+  color: #f3f4f6;
+  padding-top: 4rem;
+  margin-top: auto; 
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; 
+    gap: 3rem;
+    padding-bottom: 3rem;
+  }
+
+  &__column {
+    flex: 1; 
+    min-width: 250px;
+
+    // Estilo da Coluna 1 (Marca)
+    &.brand {
+      max-width: 350px;
+    }
+
+    // Logo no rodapé
+    .footer__logo {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      margin-bottom: 1.5rem;
+
+      .logo-icon {
+        background-color: $color-primary;
+        width: 32px;
+        height: 32px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 8px;
+        padding-top: 2px;
+      }
+
+      span {
+        font-size: 1.25rem;
+        font-weight: 700;
+        color: $color-primary; 
+      }
+    }
+
+    // Estilo dos títulos (Contato, Redes)
+    h4 {
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: $color-primary; 
+      margin-bottom: 1.5rem;
+    }
+
+    p {
+      line-height: 1.6;
+      opacity: 0.9;
+    }
+
+    // Listas (Contato e Redes)
+    ul {
+      list-style: none;
+      
+      li {
+        margin-bottom: 1rem;
+        display: flex;
+        align-items: center;
+        gap: 0.75rem; 
+        font-size: 0.95rem;
+        opacity: 0.9;
+
+        // Estilo dos ícones SVG
+        svg {
+          color: #9CA3AF; 
+          flex-shrink: 0;
+        }
+
+        a {
+          transition: color 0.2s;
+          &:hover { color: $color-primary; }
+        }
+      }
+    }
+  }
+
+  &__copyright {
+    border-top: 1px solid #222;
+    text-align: center;
+    padding: 2rem 1rem;
+    
+    p {
+      font-size: 0.85rem;
+      color: #6B7280; 
+    }
+  }
+}
+
+// Mobile
+@media (max-width: 768px) {
+  .footer__content {
+    flex-direction: column;
+    gap: 2.5rem;
+  }
+}
+
+// --- RESPONSIVIDADE (MOBILE) ---
+@media (max-width: 768px) {
+  .footer {
+    text-align: center; 
+
+    &__content {
+      flex-direction: column; 
+      gap: 3rem;
+    }
+
+    &__column {
+      align-items: center; 
+      
+      .footer__logo {
+        justify-content: center;
+      }
+
+      ul li {
+        justify-content: center; 
+      }
+    }
+  }
+}
