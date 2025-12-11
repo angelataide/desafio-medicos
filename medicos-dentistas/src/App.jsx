@@ -1,9 +1,8 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Header from './components/Header/Header';
-import Footer from './components/Footer/Footer';
+import Footer from './
 import Home from './pages/Home/Home';
 
-// ATENÇÃO AQUI: Caminho novo e nome novo
 import Voluntaria from './pages/Voluntaria/Voluntaria'; 
 
 function App() {
